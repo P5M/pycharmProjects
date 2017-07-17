@@ -1,0 +1,134 @@
+<html>
+<head>
+<title> </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+$( document ).ready(function() {
+    $("#country").change(function(){
+    	if($(this).val() == "India"){
+    		$('#state').empty();
+    		$('#select').append($('<option>').text("Select"));
+    		var state_json = [{text:"UP" },{text:"Bihar"},{text:"jharkhand"},{text:"Dehli", },{text:"kanpur"}];
+    		$.each(state_json, function(i, obj){
+                    $('#state').append($('<option>').text(obj.text).attr('value', obj.val));
+            });
+    	}
+    	if($(this).val() == "America"){
+    		$('#state').empty();
+    		$('#select').append($('<option>').text("Select"));
+    		var state_json = [{text:"Alaska"},{text:"Arizona"},{text:"Coloredo"},{text:"Florida"},{text:"Kansas"}];
+    		$.each(state_json, function(i, obj){
+                    $('#state').append($('<option>').text(obj.text).attr('value', obj.val));
+            });
+    	}
+    	if($(this).val() == "koriya"){
+    		$('#state').empty();
+    		$('#select').append($('<option>').text("Select"));
+    		var state_json = [{text:"Busan"},{text:"Daegu"},{text:"Iancheon"},{text:"Gwangju"},{text:"Deejeon"}];
+    		$.each(state_json, function(i, obj){
+                    $('#state').append($('<option>').text(obj.text).attr('value', obj.val));
+            });
+    	}
+    	if($(this).val() == "Nepal"){
+    		$('#state').empty();
+    		$('#select').append($('<option>').text("Select"));
+    		var state_json = [{text:"Kathmandu"},{text:"Lalitpur"},{text:"Bharatpur"},{text:"Biratnagar"},{text:"Birgunj"}];
+    		$.each(state_json, function(i, obj){
+                    $('#state').append($('<option>').text(obj.text).attr('value', obj.val));
+            });
+    	}
+    	if($(this).val() == "Pakistan"){
+    		$('#state').empty();
+    		$('#select').append($('<option>').text("Select"));
+    		var state_json = [{text:"Gilgit"},{text:"Islamabad"},{text:"Peshawar"},{text:"Karachi"},{text:"Qutta"}];
+    		$.each(state_json, function(i, obj){
+                    $('#state').append($('<option>').text(obj.text).attr('value', obj.val));
+            });
+    	}
+    });
+
+});
+
+function myFunction() {
+
+var abc=document.getElementById("country").value ;
+var sa=document.getElementById("state").value;
+var az=document.getElementById("Name").value ;
+
+if (document.getElementById('1').checked) {
+  ab = document.getElementById('1').value;
+}
+if (document.getElementById('2').checked) {
+  ab = document.getElementById('2').value;
+}
+if (document.getElementById('a').checked) {
+  x = document.getElementById('a').value;
+}
+if (document.getElementById('b').checked) {
+  x = document.getElementById('b').value;
+}
+if (document.getElementById('k').checked) {
+  y = document.getElementById('k').value;
+}
+if (document.getElementById('l').checked) {
+  y = document.getElementById('l').value;
+}
+if (document.getElementById('m').checked) {
+  y = document.getElementById('m').value;
+}
+if (document.getElementById('n').checked) {
+  y= document.getElementById('n').value;
+}
+    alert(abc+"\n"+sa+"\n"+az+"\n"+ab+"\n"+x+"\n"+y);
+}
+
+</script>
+</head>
+
+<body bgcolor="grad">
+
+<center>
+  <table>
+ <tr><td> COUNTRY<select id="country"><option>--select country--</option>
+<option value="India">India</option>
+<option value="America">America</option>
+<option value="koriya">koriya</option>
+<option value="Nepal"> Nepal</option>
+<option value="Pakistan">Pakistan</option>
+</select></td></tr>
+<br>
+<br>
+
+    <tr><td>STATE<select id="state"><option>--select State--</option>
+</select></td></tr>
+
+<tr><td>NAME <input type="text" id="Name" value="Name"></td></tr>
+
+<tr><td><div id="ab">Gender
+  <input type="radio" name="gender" id="1" value="male" > Male
+  <input type="radio" name="gender" id="2" value="female"> Female<br>
+  </div></td></tr>
+
+
+<tr><td><div id="x">LANGUAGE
+  <input type="checkbox" name="gender" id="a" value="Hindi" checked> Hindi
+  <input type="checkbox" name="gender" id="b" value="English"> English<br>
+  </div></td></tr><br>
+<br>
+<br>
+
+<tr><td><div id="y">SUBJECT
+  <input type="checkbox" name="Hindi" id="k" value="Hindi"checked> Hindi<br>
+  <input type="checkbox" name="English" id="l" value="English"> English<br>
+  <input type="checkbox" name="Math" id="m" value="Math" > Math<br>
+  <input type="checkbox" name="Science" id="n" value="Science"> Science
+  </div></td></tr><br>
+<br>
+<br>
+<tr><td><button onclick="myFunction()"> View</button></td></tr>
+</center>
+</div>
+</body>
+</html>
+

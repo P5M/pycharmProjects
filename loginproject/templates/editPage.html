@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<h1> Edit_Page</h1>
+    <form method="POST">{% csrf_token %}
+      <div class="form-group">
+          <label class="col-sm-4 control-label text_left"></label>
+             <div class="col-sm-8">
+                 Name    <input type="text" class="form-control"
+                        value="{{user_object.Name}}"
+                         name="name" id="name" maxlength="15"
+                         placeholder="Edit values">
+             </div><br>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-4 control-label text_left"></label>
+             <div class="col-sm-8">
+                 FatherName    <input type="text" class="form-control"
+                        value="{{ user_object.fathername}}"
+                         name="fathername" id="FatherName" maxlength="15"
+                         placeholder="Edit values">
+             </div><br>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-4 control-label text_left"></label>
+             <div class="col-sm-8">
+                Address     <input type="text" class="form-control"
+                        value="{{user_object.address}}"
+                         name="Address" id="Address" maxlength="15"
+                         placeholder="Edit values">
+             </div><br>
+      </div>
+       <div class="form-group">
+          <label class="col-sm-4 control-label text_left"></label>
+             <div class="col-sm-8">
+                MobileNo    <input type="text" class="form-control"
+                        value="{{ user_object.mobileno}}"
+                         name="mobileno" id="MobileNo" maxlength="15"
+                         placeholder="Edit values">
+             </div><br>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-4 control-label text_left"></label>
+             <div class="col-sm-8">
+                 Email   <input type="text" class="form-control"
+                        value="{{ user_object.email}}"
+                         name="email" id="email" maxlength="15"
+                         placeholder="Edit values">
+             </div><br>
+      </div>
+      <div class="form-group">
+          <label class="col-sm-4 control-label text_left"></label>
+             <div class="col-sm-8">
+                 Password    <input type="text" class="form-control"
+                        value="{{ user_object.password}}"
+                         name="password" id="password" maxlength="15"
+                         placeholder="Edit values">
+             </div><br>
+      </div>
+
+        <button type="submit" >Save</button>
+
+    </form>
+
+
+</body>
+</html>

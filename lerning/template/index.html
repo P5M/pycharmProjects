@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Index </title>
+</head>
+<body bgcolor="green">
+<center>
+    <form action="/save/" method="post">{% csrf_token %}
+        Name<input type="text" style="width:100px;height:25px;" name="name"><br><br>
+        Password<input type="text" style="width:100px;height:25px;" name="password"><br><br>
+        EMAIL<input type="text" style="width:100px;height:25px;" name="email"><br><br>
+        <input type="submit" style="width:80px;height:30px;">
+    </form>
+</center>
+</body>
+</html>

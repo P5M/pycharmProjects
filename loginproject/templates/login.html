@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Index </title>
+</head>
+<body bgcolor="green">
+<center>
+    <form action="." method="post">{% csrf_token %}
+        Name<input type="text" style="margin-left:45px;width:100px;height:25px;" name="Name"><br><br>
+        FatherName<input type="text" style="margin-left:45px;width:100px;height:25px;" name="FatherName"><br><br>
+        Address<input type="text" style="margin-left:45px;width:100px;height:25px;" name="Address"><br><br>
+        MobileNo<input type="text" style="margin-left:45px;width:100px;height:25px;" name="MobileNo"><br><br>
+        Email<input type="text" style="margin-left:45px;width:100px;height:25px;" name="Email"><br><br>
+        Password<input type="text" style="margin-left:30px;width:100px;height:25px;" name="Password"><br><br>
+        <input type="submit" style="width:80px;height:30px;">
+        <br>
+        <table>
+            {% for item in results %}
+              <tr>
+                <td>{{ item.Name }}</td>
+                  <td>{{ item.FatherName }}</td>
+                  <td>{{ item.Address}}</td>
+                  <td>{{ item.MobileNo }}</td>
+                  <td>{{ item.Email}}</td>
+                  <td>{{ item.Password}}</td>
+              </tr>
+               {% endfor %}
+        </table>
+    </form>
+</center>
+</body>
+</html>
